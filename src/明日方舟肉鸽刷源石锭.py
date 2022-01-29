@@ -22,22 +22,23 @@ def panduanguoguan():
     sleep(1.0)
 def likai():
     touch((45,30))
-    sleep(1.0)
+    sleep(3.0)
 #第二次探索如果卡主，可以适当将这里的sleep时间增加一点，比如sleep(3.0)，sleep可以理解为等待一段时间的意思
     touch(Template(r"tpl1641990570636.png", record_pos=(0.412, -0.018), resolution=(1440, 810)))
-    sleep(1.0)
+    sleep(3.0)
 #这个对象likai()里的这些sleep时间都可以适当改一下，改到适合自己模拟器运行加载速度的等待时间
     touch(Template(r"tpl1641990587770.png", record_pos=(0.159, 0.106), resolution=(1440, 810)))
     sleep(3.0)
     touch((700,730))#等一段时间点击画面进入下一个结算的界面
     sleep(3.0)
     touch((700,730))#等一段时间点击画面进入下一个结算的界面，点完这次应该就会回到肉鸽主菜单
-    sleep(3.0)#对，就是这个，靠在一起了应该可以看到吧
+    sleep(5.0)#对，就是这个，靠在一起了应该可以看到吧
 def kaishi():
     touch((1300,650))
 #可以回到肉鸽主界面但不会进行下一次探索的，请修改likai()对象里面最下面的那个sleep时间'''
     while not exists(Template(r"tpl1641990883595.png", threshold=0.8, record_pos=(0.203, 0.063), resolution=(1440, 810))):
 #精二高级的山比较稳定过关，所以选了这个分队'''
+        touch((1300,650))
         swipe((670,500),vector=[-0.1861, 0.007])
     else:
         touch(Template(r"tpl1641990883595.png", threshold=0.8, record_pos=(0.203, 0.063), resolution=(1440, 810)))
@@ -126,7 +127,7 @@ def xunshouxiaowu():
     xuanren()
     sleep(1.0)
     touch(Template(r"tpl1641988492692.png", record_pos=(0.322, 0.242), resolution=(1440, 810)))
-    sleep(8.0)
+    sleep(12.0)
     touch((1240,60))#点击加速
     sleep(3.0)
     swipe(Template(r"tpl1641988605026.png", record_pos=(0.457, 0.237), resolution=(1440, 810)),(1180,400),duration=2)#拖干员到位置，duration是拖动过程的时间，可以自行设定适当的时间防止模拟器卡顿没下到干员，单位秒，默认是0.5秒的，有人反映下干员太快就加了这个。
@@ -146,7 +147,7 @@ def lipaoxiaodui():#注释参考xunshouxiaowu()里的注释
     xuanren()
     sleep(1.0)
     touch(Template(r"tpl1641988492692.png", record_pos=(0.322, 0.242), resolution=(1440, 810)))
-    sleep(8.0)
+    sleep(12.0)
     touch((1240,60))#点击加速
     sleep(1.0)
     swipe(Template(r"tpl1641988605026.png", record_pos=(0.457, 0.237), resolution=(1440, 810)),(575,386),duration=2)#拖干员到位置
@@ -166,7 +167,7 @@ def yiwai():#注释参考xunshouxiaowu()里的注释
     xuanren()
     sleep(1.0)
     touch(Template(r"tpl1641988492692.png", record_pos=(0.322, 0.242), resolution=(1440, 810)))
-    sleep(8.0)
+    sleep(12.0)
     touch((1240,60))#点击加速
     sleep(3.0)
     swipe(Template(r"tpl1641988605026.png", record_pos=(0.457, 0.237), resolution=(1440, 810)),(806,370),duration=2)#拖干员到位置
@@ -187,7 +188,7 @@ def yuchongweiban():#注释参考xunshouxiaowu()里的注释
     xuanren()
     sleep(1.0)
     touch(Template(r"tpl1641988492692.png", record_pos=(0.322, 0.242), resolution=(1440, 810)))
-    sleep(8.0)
+    sleep(12.0)
     touch((1240,60))#点击加速
     sleep(1.0)
     swipe(Template(r"tpl1641988605026.png", record_pos=(0.457, 0.237), resolution=(1440, 810)),(667,432),duration=2)#拖干员到位置
@@ -222,6 +223,7 @@ def shandian():
     else:
         sleep(2.0)
         likai()
+    sleep(2.0)
     kaishi()
     b=0
 def panduanguanqia():
